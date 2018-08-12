@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
-get '/' do
+get '/foo' do
  "Hello World"
 end
 
