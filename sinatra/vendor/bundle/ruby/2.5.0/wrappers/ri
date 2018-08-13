@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if
+  [[ -s "/home/belre_yucho/git/JSPServletApps/sinatra/vendor/bundle/ruby/2.5.0/environment" ]]
+then
+  source "/home/belre_yucho/git/JSPServletApps/sinatra/vendor/bundle/ruby/2.5.0/environment"
+  exec ri "$@"
+else
+  echo "ERROR: Missing RVM environment file: '/home/belre_yucho/git/JSPServletApps/sinatra/vendor/bundle/ruby/2.5.0/environment'" >&2
+  exit 1
+fi
