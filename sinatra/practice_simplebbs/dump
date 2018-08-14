@@ -1,0 +1,27 @@
+Fetching gem metadata from https://rubygems.org/.........
+Using concurrent-ruby 1.0.5
+Fetching i18n 1.1.0
+Installing i18n 1.1.0
+Using minitest 5.11.3
+Using thread_safe 0.3.6
+Using tzinfo 1.2.5
+Fetching activesupport 5.2.1
+Installing activesupport 5.2.1
+Fetching activemodel 5.2.1
+Installing activemodel 5.2.1
+Using arel 9.0.0
+Fetching activerecord 5.2.1
+Installing activerecord 5.2.1
+Using backports 3.11.3
+Using bundler 1.16.3
+Using multi_json 1.13.1
+Using mustermann 1.0.2
+Using rack 2.0.5
+Using rack-protection 2.0.3
+Using tilt 2.0.8
+Using sinatra 2.0.3
+Fetching sinatra-activerecord 2.0.13
+Installing sinatra-activerecord 2.0.13
+Using sinatra-contrib 2.0.3
+Bundle complete! 4 Gemfile dependencies, 19 gems now installed.
+Bundled gems are installed into `./vendor/bundle`

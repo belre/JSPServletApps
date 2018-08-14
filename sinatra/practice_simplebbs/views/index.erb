@@ -1,0 +1,22 @@
+
+<h1>My BBS</h1>
+
+<form>
+ <% @comments.each_with_index do |comment,i| %>
+
+ <input type="radio" name="selcomment" value="chk<%=comment.id%>" <%=if i==0 then "checked=\"checked\"" end %>>
+ <%= Rack::Utils.escape_html(comment.body)%><br>
+ <% end %>
+ <button type="submit" formaction="rmcomment" formmethod="get">Delete Comment</button>
+ <button type="submit" formaction="rmcommentall" formmethod="get">Delete All</button>
+</form>
+<hr>
+<form>
+<!-- <form action="/create" method="post">-->
+ <input type="text" name ="body">
+ <button type="submit" formaction="create" formmethod="post" >Add comment</button>
+</form>
+
+
+
+
