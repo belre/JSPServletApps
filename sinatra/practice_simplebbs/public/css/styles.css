@@ -2,7 +2,7 @@
 
 body {
  font-size: 16px;
- font-family: Verbana, sans-serif;
+ font-family: Verdana, sans-serif;
 }
 
 .container {
@@ -13,7 +13,7 @@ body {
 h1 {
  font-size: 18px;
  border-bottom: 1px solid #ddd;
- padding-bottom: 10px
+ padding-bottom: 10px;
 }
 
 ul > li {
@@ -25,7 +25,7 @@ ul > li {
 }*/
 
 input[type="text"] {
- padding: 3px
+ padding: 3px;
 }
 
 .delete {

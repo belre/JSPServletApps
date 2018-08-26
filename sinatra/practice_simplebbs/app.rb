@@ -2,7 +2,7 @@
 
 Bundler.require
 
-
+require 'sinatra'
 require 'sinatra/reloader'
 require 'active_record'
 require 'rack/csrf'
@@ -10,6 +10,19 @@ require 'rack/csrf'
 
 use Rack::Session::Cookie, secret: "thisissomethingsecret"
 use Rack::Csrf, raise: true
+
+helpers do
+ def csrf_tag
+  Rack::Csrf.csrf_tag(env)
+ end
+ def csrf_token
+  Rack::Csrf.csrf_token(env)
+ end
+ def h(str)
+  Rack::Utils.escape_html(str)
+ end
+end
+
 
 # Establish Connection to sqlite3
 ActiveRecord::Base.establish_connection(
@@ -34,7 +47,6 @@ post '/create' do
 end
 
 post '/destroy' do  
- puts params[:_csrf]
  Comment.find(params[:id]).destroy
 end
 

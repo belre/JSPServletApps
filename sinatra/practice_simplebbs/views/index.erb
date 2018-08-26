@@ -3,8 +3,8 @@
 
 <ul>
  <% @comments.each do |comment| %>
- <li data-id="<%= comment.id %>" data-token="<%= Rack::Csrf.csrf_token(env) %>">
- <%= Rack::Utils.escape_html(comment.body) %>
+ <li data-id="<%= comment.id %>" data-token="<%= csrf_token %>">
+ <%= h(comment.body) %>
  <span class="delete">[x]</span>
  </li>
  <% end %>
@@ -21,7 +21,7 @@
 <hr>
 <form>
 <form action="/create" method="post">
- <%= Rack::Csrf.csrf_tag(env) %>
+ <%= csrf_tag %>
  <input type="text" name ="body" size=50>
  <button type="submit" formaction="create" formmethod="post" >Add comment</button>
 </form>
